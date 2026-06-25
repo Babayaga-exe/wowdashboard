@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>WOW Deutschland – Team Dashboard</title>
+<title>WOW Wizards & Witches – Team Dashboard</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"/>
 <style>
   :root {
@@ -285,8 +285,8 @@
   <div class="logo-area">
     <div class="logo-badge">wow</div>
     <div class="header-titles">
-      <h1>WOW Deutschland</h1>
-      <p>Customer Advisor Team · WOW Germany</p>
+      <h1>WOW Wizards &amp; Witches</h1>
+      <p>Customer Advisory Team · WOW Germany</p>
     </div>
   </div>
   <div class="header-right">
@@ -422,7 +422,7 @@
 
 </main>
 
-<footer>WOW Germany · Firstsource · JOSWIN DSILVA</footer>
+<footer>WOW Germany · WOW Wizards &amp; Witches · Powered by WOW Dashboard</footer>
 
 <script>
 // ── LIVE CLOCK ──
@@ -463,6 +463,14 @@ const agents = [
   { name:'Yaashwini Latekrishna',     cases:141, chats:69,  surveys:17, aht:16, nps:5.88,  res:52.9, ftr:29.41, csat:5.47 },
   { name:'Sonu Basilica S',           cases:148, chats:76,  surveys:20, aht:14, nps:5.00,  res:65.0, ftr:50.00, csat:6.60 },
   { name:'Mohammed Yusuf Shaikh',     cases:99,  chats:63,  surveys:22, aht:19, nps:-4.55, res:59.1, ftr:59.09, csat:6.36 },
+  { name:'Brijesh Rajashekara',       cases:113, chats:67,  surveys:21, aht:13, nps:42.86, res:76.2, ftr:61.90, csat:7.67 },
+  { name:'Margaret Rohini',           cases:163, chats:67,  surveys:21, aht:17, nps:38.10, res:76.2, ftr:61.90, csat:7.52 },
+  { name:'Lavanya Sridhar',           cases:160, chats:68,  surveys:18, aht:15, nps:33.33, res:77.8, ftr:66.67, csat:7.83 },
+  { name:'Sharal Peter',              cases:149, chats:46,  surveys:21, aht:16, nps:33.33, res:66.7, ftr:57.14, csat:7.10 },
+  { name:'Hrithick Rahul',            cases:117, chats:70,  surveys:16, aht:13, nps:31.25, res:68.8, ftr:68.75, csat:7.25 },
+  { name:'Nagendra Paib',             cases:110, chats:71,  surveys:24, aht:18, nps:29.17, res:66.7, ftr:50.00, csat:7.17 },
+  { name:'Pradeep Kumar Roy',         cases:144, chats:74,  surveys:19, aht:17, nps:26.32, res:73.7, ftr:63.16, csat:7.47 },
+  { name:'Monmaya Gurung',            cases:185, chats:96,  surveys:21, aht:19, nps:23.81, res:66.7, ftr:61.90, csat:7.05 },
 ];
 
 function initials(name) {
@@ -484,6 +492,7 @@ function csatClass(v) {
   return 'csat-low';
 }
 
+agents.sort((a, b) => b.nps - a.nps);
 const tbody = document.getElementById('agent-table-body');
 agents.forEach(a => {
   const row = document.createElement('tr');
@@ -503,6 +512,7 @@ agents.forEach(a => {
 // ── ROSTER (advisors only, no lead) ──
 const roster = [
   'Ajaykumar Muraleedharan',
+  'Brijesh Rajashekara',
   'Anandi Rajendran',
   'Arun Kumar Thomas',
   'Aswin Premraj',
@@ -513,6 +523,12 @@ const roster = [
   'Karthik Venkatesh',
   'Kolandai Yesu A',
   'Laksshita Premanatg',
+  'Hrithick Rahul',
+  'Lavanya Sridhar',
+  'Margaret Rohini',
+  'Monmaya Gurung',
+  'Nagendra Paib',
+  'Pradeep Kumar Roy',
   'Manasa Madeshan',
   'Mohammed Yusuf Shaikh',
   'Nihal Bhaskar',
@@ -522,6 +538,7 @@ const roster = [
   'Rishab Tiwari',
   'Rochelle Pereira',
   'Shahana Khanum',
+  'Sharal Peter',
   'Shlok Chatterjee',
   'Soumik Chakraborty',
   'Sonu Basilica S',
